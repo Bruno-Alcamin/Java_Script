@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+<title>Calculadora Java Script</title>
+
+<script type="text/javascript">
+	function limpar(){
+		document.getElementById('visor').value = ' ';
+	}
+	
+	function preencher(valor){
+		document.getElementById('visor').value += valor;
+	}
+
+	function calcular(){
+		var resultado = 0;
+		resultado = document.getElementById('visor').value;
+		document.getElementById('visor').value = ' ';
+		document.getElementById('visor').value = eval(resultado);	
+	}
+	
+</script>
+<style>
+label > span{
+	display:none;
+}
+
+input[name="botao"]{
+	width:50px;
+	height:40px;
+	font-size:1.5em;
+
+}
+input[name="botao"]:hover{
+	background-color:#ededed;
+}
+
+#visor{
+	padding:5px;
+	width:200px;
+	font-size:1.5em;
+	color:#f00;
+	text-align:right;
+}
+</style>
+
+
+</head>
+<label><span>visor</span>
+<input type="text" name="visor" id="visor">
+</label>
+<br><br>
+<label><span>numero 9</span>
+<input type="submit" value="9" name="botao" onclick="preencher(9);">
+</label>
+<label><span>numero 8</span>
+<input type="submit" value="8" name="botao" onclick="preencher(8);">
+</label>
+<label><span>numero 7</span>
+<input type="submit" value="7" name="botao" onclick="preencher(7);">
+</label>
+<label><span>operador de divisão</span>
+<input type="submit" value="/" name="botao" onclick="preencher('/');">
+</label>
+<br><br>
+<label><span>numero 6</span>
+<input type="submit" value="6" name="botao" onclick="preencher(6);">
+</label>
+<label><span>numero 5</span>
+<input type="submit" value="5" name="botao" onclick="preencher(5);">
+</label>
+<label><span>numero 4</span>
+<input type="submit" value="4" name="botao" onclick="preencher(4);">
+</label>
+<label><span>operador de multiplicação</span>
+<input type="submit" value="*" name="botao" onclick="preencher('*');">
+</label>
+<br><br>
+<label><span>numero 3</span>
+<input type="submit" value="3" name="botao" onclick="preencher(3);">
+</label>
+<label><span>numero 2</span>
+<input type="submit" value="2" name="botao" onclick="preencher(2);">
+</label>
+<label><span>numero 1</span>
+<input type="submit" value="1" name="botao" onclick="preencher(1);">
+</label>
+<label><span>operador da soma</span>
+<input type="submit" value="+" name="botao" onclick="preencher('+');">
+</label>
+<br><br>
+<label><span>numero 0</span>
+<input type="submit" value="0" name="botao" onclick="preencher(0);">
+</label>
+<label><span>botão limpar</span>
+<input type="submit" value="C" name="botao" onclick="limpar();">
+</label>
+<label><span>botão calcular</span>
+<input type="submit" value="=" name="botao" onclick="calcular();">
+</label>
+<label><span>operador de subtração</span>
+<input type="submit" value="-" name="botao" onclick="preencher('-');">
+</label>
+
+<body>
+
+</body>
+
+</html>
